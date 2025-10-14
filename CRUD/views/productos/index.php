@@ -54,7 +54,6 @@
                             <thead class="table-dark">
                                 <tr>
                                     <th>ID</th>
-                                    <th>Imagen</th>
                                     <th>Nombre</th>
                                     <th>Descripción</th>
                                     <th>Tipo</th>
@@ -68,28 +67,17 @@
                             <tbody>
                                 <?php if (empty($productos)): ?>
                                     <tr>
-                                        <td colspan="10" class="text-center">No hay productos registrados</td>
+                                        <td colspan="9" class="text-center">No hay productos registrados</td>
                                     </tr>
                                 <?php else: ?>
                                     <?php foreach ($productos as $producto): ?>
                                         <tr>
                                             <td><?php echo htmlspecialchars($producto['id_producto']); ?></td>
-                                            <td>
-                                                <?php if (!empty($producto['imagen'])): ?>
-                                                    <img src="<?php echo htmlspecialchars($producto['imagen']); ?>" 
-                                                         alt="Imagen del producto" class="img-thumbnail" style="width: 50px; height: 50px;">
-                                                <?php else: ?>
-                                                    <div class="bg-light d-flex align-items-center justify-content-center" 
-                                                         style="width: 50px; height: 50px;">
-                                                        <i class="fas fa-image text-muted"></i>
-                                                    </div>
-                                                <?php endif; ?>
-                                            </td>
                                             <td><?php echo htmlspecialchars($producto['nombre_producto']); ?></td>
-                                            <td><?php echo htmlspecialchars(substr($producto['nombre_tipo'], 0, 50)) . '...'; ?></td>
+                                            <td><?php echo htmlspecialchars(substr($producto['descripcion'], 0, 50)) . '...'; ?></td>
                                             <td>
                                                 <span class="badge bg-info">
-                                                    <?php echo htmlspecialchars($producto['tipo_producto']); ?>
+                                                    <?php echo htmlspecialchars($producto['nombre_tipo']); ?>
                                                 </span>
                                             </td>
                                             <td>

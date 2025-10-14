@@ -25,8 +25,7 @@ class ProductoController {
                 'material' => $_POST['material'] ?? '',
                 'precio' => $_POST['precio'] ?? 0,
                 'tipo_producto' => $_POST['tipo_producto'] ?? '',
-                'stock' => $_POST['stock'] ?? 0,
-                'imagen' => $_POST['imagen'] ?? ''
+                'stock' => $_POST['stock'] ?? 0
             ];
             
             // Validaciones básicas
@@ -80,8 +79,7 @@ class ProductoController {
                 'material' => $_POST['material'] ?? '',
                 'precio' => $_POST['precio'] ?? 0,
                 'tipo_producto' => $_POST['tipo_producto'] ?? '',
-                'stock' => $_POST['stock'] ?? 0,
-                'imagen' => $_POST['imagen'] ?? ''
+                'stock' => $_POST['stock'] ?? 0
             ];
             
             // Validaciones básicas

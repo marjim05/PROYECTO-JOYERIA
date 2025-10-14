@@ -118,11 +118,6 @@ function formatPrice(price) {
     }).format(price);
 }
 
-// Función para validar URLs de imágenes
-function isValidImageUrl(url) {
-    const pattern = /^https?:\/\/.+\.(jpg|jpeg|png|gif|webp)$/i;
-    return pattern.test(url);
-}
 
 // Función para mostrar preview de imagen
 function showImagePreview(input) {

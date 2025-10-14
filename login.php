@@ -16,7 +16,7 @@
                     <input type="password" class="form-control" id="password" >
                 </div>
             </form>
-            <a type="button" href="CRUD/views/dashboard/index.php" class="btn btn-warning">Iniciar Sesión</a>
+            <a type="button" href="CRUD/views/dashboard/index.php?action=dashboard" class="btn btn-warning">Iniciar Sesión</a>
 
     </div>
 

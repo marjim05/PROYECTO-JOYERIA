@@ -18,9 +18,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">
-                <strong>Winlux</strong>
-            </a>
+            <strong>Winlux</strong>
             
             
                 
@@ -46,19 +44,13 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($action == 'dashboard') ? 'active' : ''; ?>" href="index.php">
-                                <i class="fas fa-tachometer-alt me-2"></i>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo ($action == 'productos') ? 'active' : ''; ?>" href="index.php?action=productos">
+                            <a class="nav-link" href="index.php?action=productos">
                                 <i class="fas fa-gem me-2"></i>
                                 Productos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo ($action == 'tipos') ? 'active' : ''; ?>" href="index.php?action=tipos">
+                            <a class="nav-link" href="index.php?action=tipos">
                                 <i class="fas fa-tags me-2"></i>
                                 Tipos de Productos
                             </a>

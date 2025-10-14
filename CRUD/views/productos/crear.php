@@ -84,12 +84,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Imagen del Producto</label>
-                            <input type="file" class="form-control" id="imagen" name="imagen" 
-                                   value="<?php echo htmlspecialchars($_POST['imagen'] ?? ''); ?>">
-                        </div>
                         
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="index.php?action=productos" class="btn btn-secondary me-md-2">Cancelar</a>

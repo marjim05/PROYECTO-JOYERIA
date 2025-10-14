@@ -14,8 +14,8 @@ class Producto {
     public function crear($data) {
         try {
             $query = "INSERT INTO " . $this->table_name . " 
-                      (nombre_producto, descripcion, material, precio, tipo_producto, stock, imagen) 
-                      VALUES (?, ?, ?, ?, ?, ?, ?)";
+                      (nombre_producto, descripcion, material, precio, tipo_producto, stock) 
+                      VALUES (?, ?, ?, ?, ?, ?)";
             
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(1, $data['nombre_producto']);
@@ -24,7 +24,6 @@ class Producto {
             $stmt->bindParam(4, $data['precio']);
             $stmt->bindParam(5, $data['tipo_producto']);
             $stmt->bindParam(6, $data['stock']);
-            $stmt->bindParam(7, $data['imagen']);
             
             if($stmt->execute()) {
                 return true;
@@ -66,7 +65,7 @@ class Producto {
         try {
             $query = "UPDATE " . $this->table_name . " 
                       SET nombre_producto = ?, descripcion = ?, material = ?, 
-                          precio = ?, tipo_producto = ?, stock = ?, imagen = ? 
+                          precio = ?, tipo_producto = ?, stock = ? 
                       WHERE id_producto = ?";
             
             $stmt = $this->conn->prepare($query);
@@ -76,8 +75,7 @@ class Producto {
             $stmt->bindParam(4, $data['precio']);
             $stmt->bindParam(5, $data['tipo_producto']);
             $stmt->bindParam(6, $data['stock']);
-            $stmt->bindParam(7, $data['imagen']);
-            $stmt->bindParam(8, $id);
+            $stmt->bindParam(7, $id);
             
             if($stmt->execute()) {
                 return true;

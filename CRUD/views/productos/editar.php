@@ -19,7 +19,7 @@
 
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" action="index.php?action=productos&method=editar&id=<?php echo $producto['id_producto']; ?>">
+                    <form method="POST" action="index.php?action=productos&method=editar&id=<?php echo $producto['id_producto']; ?> " enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
@@ -89,7 +89,7 @@
                             <label for="imagen" class="form-label">Imagen del Producto</label>
                             <input type="file" class="form-control" id="imagen" name="imagen" 
                                    value="<?php echo htmlspecialchars($producto['imagen']); ?>"
-                                   placeholder="https://ejemplo.com/imagen.jpg">
+                                   accept="image/*">
                         </div>
                         
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
