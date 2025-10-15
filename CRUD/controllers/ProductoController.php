@@ -47,7 +47,7 @@ class ProductoController {
                     exit;
                 } else {
                     $_SESSION['error'] = 'Error al crear el producto. Revisa los logs para más detalles.';
-                    error_log("Error al crear producto con datos: " . print_r($data, true));
+                    error_log("Error al crear producto con datos: ");
                 }
             }
         }
@@ -93,7 +93,7 @@ class ProductoController {
                 $_SESSION['error'] = 'El stock no puede ser negativo';
             } else {
                 // Debug: Log de datos antes de actualizar
-                error_log("Datos para actualizar producto ID $id: " . print_r($data, true));
+                error_log("Datos para actualizar producto ID: ");
                 
                 if ($this->productoModel->actualizar($id, $data)) {
                     $_SESSION['success'] = 'Producto actualizado exitosamente';
@@ -101,7 +101,7 @@ class ProductoController {
                     exit;
                 } else {
                     $_SESSION['error'] = 'Error al actualizar el producto. Revisa los logs para más detalles.';
-                    error_log("Error al actualizar producto ID $id con datos: " . print_r($data, true));
+                    error_log("Error al actualizar producto ID con datos: ");
                 }
             }
         }

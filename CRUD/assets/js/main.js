@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto-hide alerts después de 5 segundos
     const alerts = document.querySelectorAll('.alert');
-    alerts.forEach(function(alert) {
+    alerts.for(function(alert) {
         setTimeout(function() {
             const bsAlert = new bootstrap.Alert(alert);
             bsAlert.close();
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Confirmación para eliminar elementos
     const deleteButtons = document.querySelectorAll('[onclick*="confirm"]');
-    deleteButtons.forEach(function(button) {
+    deleteButtons.for(function(button) {
         button.addEventListener('click', function(e) {
             if (!confirm('¿Estás seguro de que quieres realizar esta acción?')) {
                 e.preventDefault();
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Validación de formularios (solo visual, no bloquea envío)
     const forms = document.querySelectorAll('form');
-    forms.forEach(function(form) {
+    forms.for(function(form) {
         form.addEventListener('submit', function(e) {
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
             
-            requiredFields.forEach(function(field) {
+            requiredFields.for(function(field) {
                 if (!field.value.trim()) {
                     isValid = false;
                     field.classList.add('is-invalid');
@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Formatear números en tiempo real
     const priceInputs = document.querySelectorAll('input[name="precio"]');
-    priceInputs.forEach(function(input) {
+    priceInputs.for(function(input) {
         input.addEventListener('input', function() {
-            let value = this.value.replace(/\D/g, '');
+            let value = this.value.replaceAll(/\D/g, '');
             if (value) {
-                this.value = parseInt(value).toLocaleString();
+                this.value = Number.parseInt(value).toLocaleString();
             }
         });
     });
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animación de carga para botones (simplificada)
     const submitButtons = document.querySelectorAll('button[type="submit"]');
-    submitButtons.forEach(function(button) {
+    submitButtons.for(function(button) {
         button.addEventListener('click', function() {
             // Solo cambiar el texto, no deshabilitar
             const originalText = this.innerHTML;
@@ -116,7 +116,7 @@ function formatPrice(price) {
 
 // Función para mostrar preview de imagen
 function showImagePreview(input) {
-    if (input.files && input.files[0]) {
+    if (input.files?.[0]) {
         const reader = new FileReader();
         reader.onload = function(e) {
             const preview = document.getElementById('image-preview');
