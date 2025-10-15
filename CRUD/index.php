@@ -1,5 +1,8 @@
 <?php
-session_start();
+require_once 'config/auth.php';
+
+// Verificar autenticación antes de cualquier acción
+requerirAutenticacion();
 
 // Incluir controladores
 require_once 'controllers/TipoController.php';

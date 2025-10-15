@@ -27,10 +27,16 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-user me-1"></i>Administrador
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="../../../../index.php"><i class="fas fa-sign-out-alt me-1"></i>Cerrar Sesión</a></li>
-                        </ul>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="index.php?action=perfil">
+                        <i class="fas fa-user-cog me-2"></i>Perfil
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="../../logout.php" class="btn btn-outline-danger btn-sm">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </div>
+            
                     </li>
                 </ul>
             </div>

@@ -1,13 +1,19 @@
-<?php include 'views/layout/header.php'; ?>
+<?php 
+require_once __DIR__ . '/../../config/auth.php';
+$usuario = obtenerUsuarioActual();
+include __DIR__ . '/../layout/header.php'; 
+?>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2>Gestión de Productos</h2>
-                <a href="index.php?action=productos&method=crear" class="btn btn-primary">
-                    <i class="fas fa-plus"></i> Nuevo Producto
-                </a>
+                <div class="d-flex align-items-center">
+                    <a href="index.php?action=productos&method=crear" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Nuevo Producto
+                    </a>
+                </div>
             </div>
 
             <?php if (isset($_SESSION['success'])): ?>
@@ -115,4 +121,4 @@
     </div>
 </div>
 
-<?php include 'views/layout/footer.php'; ?>
+<?php include __DIR__ . '/../layout/footer.php'; ?>

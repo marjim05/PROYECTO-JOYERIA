@@ -1,10 +1,13 @@
-<?php include '../../views/layout/header.php'; ?>
+<?php 
+require_once __DIR__ . '/../../config/auth.php';
+$usuario = obtenerUsuarioActual();
+include __DIR__ . '/../layout/header.php'; 
+?>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="mb-4">Dashboard - Joyería Winlux</h1>
-            
+
 
             <!-- Acciones rápidas -->
             <div class="row mb-4">
@@ -120,4 +123,4 @@
     </div>
 </div>
 
-<?php include '../../views/layout/footer.php'; ?>
+<?php include __DIR__ . '/../layout/footer.php'; ?>
