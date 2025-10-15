@@ -23,7 +23,7 @@ if ($_POST) {
     }
 }
 
-include 'layout/header.php'; 
+include_once 'layout/header.php'; 
 ?>
 
     <header class="bg-light text-dark text-center py-5" style="margin-bottom: 50px;">
@@ -49,7 +49,7 @@ include 'layout/header.php';
         </form>
     </div>
 
-<?php include 'layout/footer.php'; ?>
+<?php include_once 'layout/footer.php'; ?>
 
 </body>
 </html>

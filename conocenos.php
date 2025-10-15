@@ -1,4 +1,4 @@
-<?php include 'layout/header.php'; ?>
+<?php include_once 'layout/header.php'; ?>
 
     <header class="bg-light text-dark text-center py-5" style="margin-bottom: 50px;">
         <h1>Conócenos</h1>
@@ -106,6 +106,6 @@ Winlux: el brillo que te define.</h5>
         </div>
     </div>
 
-    <?php include 'layout/footer.php'; ?>
+    <?php include_once 'layout/footer.php'; ?>
 </body>
 </html>

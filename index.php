@@ -1,4 +1,4 @@
-<?php include 'layout/header.php'; ?>
+<?php include_once 'layout/header.php'; ?>
 
       <!-- HERO / PORTADA -->
   <section class="hero d-flex align-items-center justify-content-center">

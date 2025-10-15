@@ -1,7 +1,7 @@
 <?php 
 require_once __DIR__ . '/../../config/auth.php';
 $usuario = obtenerUsuarioActual();
-include __DIR__ . '/../layout/header.php'; 
+include_once __DIR__ . '/../layout/header.php'; 
 ?>
 
 <div class="container-fluid">
@@ -74,4 +74,4 @@ include __DIR__ . '/../layout/header.php';
     </div>
 </div>
 
-<?php include __DIR__ . '/../layout/footer.php'; ?>
+<?php include_once __DIR__ . '/../layout/footer.php'; ?>
