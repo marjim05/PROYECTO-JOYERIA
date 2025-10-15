@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
         <div class="container-fluid">
             <strong>Winlux</strong>
             
@@ -24,9 +24,9 @@
                 
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onkeypress="if(event.key==='Enter') this.click();">
                             <i class="fas fa-user me-1"></i>Administrador
-                        </a>
+                        </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="index.php?action=perfil">
                         <i class="fas fa-user-cog me-2"></i>Perfil
@@ -46,7 +46,7 @@
     <!-- Sidebar -->
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" aria-label ="Sidebar">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">

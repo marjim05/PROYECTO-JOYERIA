@@ -1,5 +1,8 @@
 <?php
-require_once 'config/database.php';
+namespace Models;
+
+require_once __DIR__ . '/../config/database.php';
+
 
 class TipoProducto {
     private $conn;

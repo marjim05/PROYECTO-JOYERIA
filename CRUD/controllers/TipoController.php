@@ -1,6 +1,12 @@
 <?php
-require_once 'config/auth.php';
-require_once 'models/TipoProducto.php';
+use Config\Auth;
+use Models\TipoProducto;
+
+use Views\Tipos\EditarView;
+use Views\Tipos\CrearView;
+use Views\Tipos\IndexView;
+
+
 
 class TipoController {
     private $tipoModel;
@@ -11,7 +17,7 @@ class TipoController {
 
     public function index() {
         $tipos = $this->tipoModel->leerTodos();
-        include 'views/tipos/index.php';
+        IndexView::render($tipos);
     }
 
     public function crear() {
@@ -32,14 +38,14 @@ class TipoController {
                     $_SESSION['error'] = 'Error al crear el tipo de producto. Revisa los logs para más detalles.';
                     error_log("Error al crear tipo con nombre: " . $nombre_tipo);
                 }
-            }
         }
         
-        include 'views/tipos/crear.php';
+        CrearView::render();
+    }
     }
 
     public function editar() {
-        $id = $_GET['id'] ?? null;
+        $id = isset($_GET['id']) ? filter_var($_GET['id'], FILTER_VALIDATE_INT) : null;
         
         if (!$id) {
             header('Location: index.php?action=tipos');
@@ -70,15 +76,15 @@ class TipoController {
                 } else {
                     $_SESSION['error'] = 'Error al actualizar el tipo de producto. Revisa los logs para más detalles.';
                     error_log("Error al actualizar tipo ID $id con nombre: " . $nombre_tipo);
-                }
-            }
         }
         
-        include 'views/tipos/editar.php';
+        EditarView::render($tipo);
     }
+    }
+}
 
     public function eliminar() {
-        $id = $_GET['id'] ?? null;
+        $id = isset($_GET['id']) ? filter_var($_GET['id'], FILTER_VALIDATE_INT) : null;
         
         if (!$id) {
             header('Location: index.php?action=tipos');
@@ -95,4 +101,4 @@ class TipoController {
         exit;
     }
 }
-?>
+

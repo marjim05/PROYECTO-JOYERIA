@@ -1,11 +1,6 @@
 // JavaScript personalizado para el dashboard de Joyería Winlux
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar tooltips de Bootstrap
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
 
     // Auto-hide alerts después de 5 segundos
     const alerts = document.querySelectorAll('.alert');

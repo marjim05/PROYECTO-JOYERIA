@@ -4,6 +4,10 @@ require_once 'config/auth.php';
 // Verificar autenticación antes de cualquier acción
 requerirAutenticacion();
 
+// Incluir modelos
+require_once 'models/TipoProducto.php';
+require_once 'models/Producto.php';
+
 // Incluir controladores
 require_once 'controllers/TipoController.php';
 require_once 'controllers/ProductoController.php';
@@ -58,9 +62,6 @@ switch ($action) {
     case 'dashboard':
     default:
         // Mostrar dashboard principal
-        require_once 'models/Producto.php';
-        require_once 'models/TipoProducto.php';
-        
         $productoModel = new Producto();
         $tipoModel = new TipoProducto();
         

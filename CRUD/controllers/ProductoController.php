@@ -39,7 +39,7 @@ class ProductoController {
                 $_SESSION['error'] = 'El stock no puede ser negativo';
             } else {
                 // Debug: Log de datos antes de crear
-                error_log("Datos para crear producto: " . print_r($data, true));
+                error_log("Datos para crear producto: ");
                 
                 if ($this->productoModel->crear($data)) {
                     $_SESSION['success'] = 'Producto creado exitosamente';

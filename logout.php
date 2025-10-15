@@ -8,3 +8,4 @@ cerrarSesion();
 header('Location: login.php');
 exit();
 ?>
+
