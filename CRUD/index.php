@@ -65,9 +65,7 @@ switch ($action) {
         $productoModel = new Producto();
         $tipoModel = new TipoProducto();
         
-
-        
-        include 'views/dashboard/index.php';
+        include_once 'views/dashboard/index.php';
         break;
 }
 ?>

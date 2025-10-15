@@ -3,6 +3,9 @@ require_once 'config/auth.php';
 require_once 'models/Producto.php';
 require_once 'models/TipoProducto.php';
 
+define('REDIRECT_PRODUCTOS', 'Location: index.php?action=productos');
+
+
 class ProductoController {
     private $productoModel;
     private $tipoModel;
@@ -15,7 +18,7 @@ class ProductoController {
     public function index() {
         $productos = $this->productoModel->leerTodos();
         $tipos = $this->tipoModel->leerTodos();
-        include 'views/productos/index.php';
+        include_once 'views/productos/index.php';
     }
 
     public function crear() {
@@ -54,14 +57,14 @@ class ProductoController {
         
         $tipos = $this->tipoModel->leerTodos();
         $opciones_material = $this->productoModel->getOpcionesMaterial();
-        include 'views/productos/crear.php';
+        include_once 'views/productos/crear.php';
     }
 
     public function editar() {
         $id = $_GET['id'] ?? null;
         
         if (!$id) {
-            header('Location: index.php?action=productos');
+            header(REDIRECT_PRODUCTOS);
             exit;
         }
 
@@ -69,7 +72,7 @@ class ProductoController {
         
         if (!$producto) {
             $_SESSION['error'] = 'Producto no encontrado';
-            header('Location: index.php?action=productos');
+            header(REDIRECT_PRODUCTOS);
             exit;
         }
 
@@ -97,7 +100,7 @@ class ProductoController {
                 
                 if ($this->productoModel->actualizar($id, $data)) {
                     $_SESSION['success'] = 'Producto actualizado exitosamente';
-                    header('Location: index.php?action=productos');
+                    header(REDIRECT_PRODUCTOS);
                     exit;
                 } else {
                     $_SESSION['error'] = 'Error al actualizar el producto. Revisa los logs para más detalles.';
@@ -108,14 +111,14 @@ class ProductoController {
         
         $tipos = $this->tipoModel->leerTodos();
         $opciones_material = $this->productoModel->getOpcionesMaterial();
-        include 'views/productos/editar.php';
+        include_once 'views/productos/editar.php';
     }
 
     public function eliminar() {
         $id = $_GET['id'] ?? null;
         
         if (!$id) {
-            header('Location: index.php?action=productos');
+            header(REDIRECT_PRODUCTOS);
             exit;
         }
 
@@ -125,7 +128,7 @@ class ProductoController {
             $_SESSION['error'] = 'Error al eliminar el producto';
         }
         
-        header('Location: index.php?action=productos');
+        header(REDIRECT_PRODUCTOS);
         exit;
     }
 
@@ -140,7 +143,7 @@ class ProductoController {
         }
         
         $tipos = $this->tipoModel->leerTodos();
-        include 'views/productos/index.php';
+        include_once 'views/productos/index.php';
     }
 }
 ?>

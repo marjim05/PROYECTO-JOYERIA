@@ -2,6 +2,7 @@
 namespace Models;
 
 require_once __DIR__ . '/../config/database.php';
+use PDO;
 
 
 class TipoProducto {
@@ -26,7 +27,7 @@ class TipoProducto {
                 error_log("Error al ejecutar INSERT en tipo_producto: " . implode(", ", $stmt->errorInfo()));
                 return false;
             }
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             error_log("Error PDO en crear tipo producto: " . $e->getMessage());
             return false;
         }
@@ -63,7 +64,7 @@ class TipoProducto {
                 error_log("Error al ejecutar UPDATE en tipo_producto: " . implode(", ", $stmt->errorInfo()));
                 return false;
             }
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             error_log("Error PDO en actualizar tipo producto: " . $e->getMessage());
             return false;
         }

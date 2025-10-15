@@ -6,7 +6,7 @@ use Views\Tipos\EditarView;
 use Views\Tipos\CrearView;
 use Views\Tipos\IndexView;
 
-
+define('REDIRECT_TIPOS', 'Location: index.php?action=tipos');
 
 class TipoController {
     private $tipoModel;
@@ -28,15 +28,15 @@ class TipoController {
                 $_SESSION['error'] = 'El nombre del tipo es requerido';
             } else {
                 // Debug: Log de datos antes de crear
-                error_log("Datos para crear tipo: " . $nombre_tipo);
+                error_log("Datos para crear tipo");
                 
                 if ($this->tipoModel->crear($nombre_tipo)) {
                     $_SESSION['success'] = 'Tipo de producto creado exitosamente';
-                    header('Location: index.php?action=tipos');
+                    header(REDIRECT_TIPOS);
                     exit;
                 } else {
                     $_SESSION['error'] = 'Error al crear el tipo de producto. Revisa los logs para más detalles.';
-                    error_log("Error al crear tipo con nombre: " . $nombre_tipo);
+                    error_log("Error al crear tipo");
                 }
         }
         
@@ -48,7 +48,7 @@ class TipoController {
         $id = isset($_GET['id']) ? filter_var($_GET['id'], FILTER_VALIDATE_INT) : null;
         
         if (!$id) {
-            header('Location: index.php?action=tipos');
+            header(REDIRECT_TIPOS);
             exit;
         }
 
@@ -56,7 +56,7 @@ class TipoController {
         
         if (!$tipo) {
             $_SESSION['error'] = 'Tipo de producto no encontrado';
-            header('Location: index.php?action=tipos');
+            header(REDIRECT_TIPOS);
             exit;
         }
 
@@ -66,16 +66,14 @@ class TipoController {
             if (empty($nombre_tipo)) {
                 $_SESSION['error'] = 'El nombre del tipo es requerido';
             } else {
-                // Debug: Log de datos antes de actualizar
-                error_log("Datos para actualizar tipo ID $id: " . $nombre_tipo);
                 
                 if ($this->tipoModel->actualizar($id, $nombre_tipo)) {
                     $_SESSION['success'] = 'Tipo de producto actualizado exitosamente';
-                    header('Location: index.php?action=tipos');
+                    header(REDIRECT_TIPOS);
                     exit;
                 } else {
                     $_SESSION['error'] = 'Error al actualizar el tipo de producto. Revisa los logs para más detalles.';
-                    error_log("Error al actualizar tipo ID $id con nombre: " . $nombre_tipo);
+                    error_log("Error al actualizar tipo ID");
         }
         
         EditarView::render($tipo);
@@ -87,7 +85,7 @@ class TipoController {
         $id = isset($_GET['id']) ? filter_var($_GET['id'], FILTER_VALIDATE_INT) : null;
         
         if (!$id) {
-            header('Location: index.php?action=tipos');
+            header(REDIRECT_TIPOS);
             exit;
         }
 
@@ -97,7 +95,7 @@ class TipoController {
             $_SESSION['error'] = 'No se puede eliminar el tipo de producto porque tiene productos asociados';
         }
         
-        header('Location: index.php?action=tipos');
+        header(REDIRECT_TIPOS);
         exit;
     }
 }
