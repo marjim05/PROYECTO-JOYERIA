@@ -1,6 +1,5 @@
 <?php
-use Views\Layout\Header;
-
+include_once 'views/layout/header.php';
 ?>
 
 <div class="container-fluid">
@@ -101,6 +100,6 @@ use Views\Layout\Header;
     </div>
 </div>
 <?php
-use Views\Layout\Footer;
+include_once 'views/layout/footer.php';
 ?>
 
