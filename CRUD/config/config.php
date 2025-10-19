@@ -82,4 +82,3 @@ class Config {
         file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
     }
 }
-?>

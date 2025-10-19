@@ -24,8 +24,8 @@ include_once 'views/layout/header.php';
                     <form method="POST" action="index.php?action=tipos&method=editar&id=<?php echo $tipo['id_tipo']; ?>">
                         <div class="mb-3">
                             <label for="nombre_tipo" class="form-label">Nombre del Tipo *</label>
-                            <input type="text" class="form-control" id="nombre_tipo" name="nombre_tipo" 
-                                   value="<?php echo htmlspecialchars($tipo['nombre_tipo']); ?>" 
+                            <input type="text" class="form-control" id="nombre_tipo" name="nombre_tipo"
+                                   value="<?php echo htmlspecialchars($tipo['nombre_tipo']); ?>"
                                    placeholder="Ej: Anillos, Collares, Pulseras..." required>
                             <div class="form-text">Modifica el nombre del tipo de producto</div>
                         </div>

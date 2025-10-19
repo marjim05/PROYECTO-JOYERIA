@@ -33,7 +33,7 @@ class ProductoController {
             ];
             
             // Validaciones básicas
-            if (empty($data['nombre_producto']) || empty($data['descripcion']) || 
+            if (empty($data['nombre_producto']) || empty($data['descripcion']) ||
                 empty($data['material']) || empty($data['tipo_producto'])) {
                 $_SESSION['error'] = 'Todos los campos son requeridos';
             } elseif ($data['precio'] <= 0) {
@@ -87,7 +87,7 @@ class ProductoController {
             ];
             
             // Validaciones básicas
-            if (empty($data['nombre_producto']) || empty($data['descripcion']) || 
+            if (empty($data['nombre_producto']) || empty($data['descripcion']) ||
                 empty($data['material']) || empty($data['tipo_producto'])) {
                 $_SESSION['error'] = 'Todos los campos son requeridos';
             } elseif ($data['precio'] <= 0) {
@@ -146,4 +146,4 @@ class ProductoController {
         include_once 'views/productos/index.php';
     }
 }
-?>
+

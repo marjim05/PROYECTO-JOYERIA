@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let isValid = true;
             
             requiredFields.for(function(field) {
-                if (!field.value.trim()) {
+                if (field.value.trim()) {
                     isValid = false;
                     field.classList.add('is-invalid');
                 } else {

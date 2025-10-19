@@ -38,7 +38,7 @@ include_once __DIR__ . '/../layout/header.php';
                         <input type="hidden" name="method" value="buscar">
                         <div class="col-md-8">
                             <input type="text" class="form-control" name="q" 
-                                   placeholder="Buscar productos por nombre, descripción o tipo..." 
+                                   placeholder="Buscar productos por nombre, descripción o tipo..."
                                    value="<?php echo htmlspecialchars($_GET['q'] ?? ''); ?>">
                         </div>
                         <div class="col-md-4">
@@ -99,11 +99,11 @@ include_once __DIR__ . '/../layout/header.php';
                                             </td>
                                             <td><?php echo date('d/m/Y', strtotime($producto['fecha_creacion'])); ?></td>
                                             <td>
-                                                <a href="index.php?action=productos&method=editar&id=<?php echo $producto['id_producto']; ?>" 
+                                                <a href="index.php?action=productos&method=editar&id=<?php echo $producto['id_producto']; ?>"
                                                    class="btn btn-sm btn-warning me-2">
                                                     <i class="fas fa-edit"></i> Editar
                                                 </a>
-                                                <a href="index.php?action=productos&method=eliminar&id=<?php echo $producto['id_producto']; ?>" 
+                                                <a href="index.php?action=productos&method=eliminar&id=<?php echo $producto['id_producto']; ?>"
                                                    class="btn btn-sm btn-danger"
                                                    onclick="return confirm('¿Estás seguro de que quieres eliminar este producto?')">
                                                     <i class="fas fa-trash"></i> Eliminar

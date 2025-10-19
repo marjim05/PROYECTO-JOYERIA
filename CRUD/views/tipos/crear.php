@@ -22,8 +22,8 @@
                     <form method="POST" action="index.php?action=tipos&method=crear">
                         <div class="mb-3">
                             <label for="nombre_tipo" class="form-label">Nombre del Tipo *</label>
-                            <input type="text" class="form-control" id="nombre_tipo" name="nombre_tipo" 
-                                   value="<?php echo htmlspecialchars($_POST['nombre_tipo'] ?? ''); ?>" 
+                            <input type="text" class="form-control" id="nombre_tipo" name="nombre_tipo"
+                                   value="<?php echo htmlspecialchars($_POST['nombre_tipo'] ?? ''); ?>"
                                    placeholder="Ej: Anillos, Collares, Pulseras..." required>
                             <div class="form-text">Ingresa el nombre del nuevo tipo de producto</div>
                         </div>

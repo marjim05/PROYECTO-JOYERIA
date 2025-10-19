@@ -68,4 +68,4 @@ switch ($action) {
         include_once 'views/dashboard/index.php';
         break;
 }
-?>
+

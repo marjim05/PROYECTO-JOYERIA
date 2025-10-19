@@ -99,9 +99,7 @@ class TipoProducto {
         
         // Extraer valores del enum
         preg_match("/enum\((.*)\)/", $result['Type'], $matches);
-        $enum_values = str_replace("'", "", explode(",", $matches[1]));
+        return str_replace("'", "", explode(",", $matches[1]));
         
-        return $enum_values;
     }
 }
-?>

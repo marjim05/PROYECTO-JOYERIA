@@ -74,4 +74,4 @@ function obtenerUsuarioActual() {
     }
     return null;
 }
-?>
+

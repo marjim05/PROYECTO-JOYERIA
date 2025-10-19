@@ -52,11 +52,11 @@ include_once __DIR__ . '/../layout/header.php';
                                             <td><?php echo htmlspecialchars($tipo['id_tipo']); ?></td>
                                             <td><?php echo htmlspecialchars($tipo['nombre_tipo']); ?></td>
                                             <td>
-                                                <a href="index.php?action=tipos&method=editar&id=<?php echo $tipo['id_tipo']; ?>" 
+                                                <a href="index.php?action=tipos&method=editar&id=<?php echo $tipo['id_tipo']; ?>"
                                                    class="btn btn-sm btn-warning me-2">
                                                     <i class="fas fa-edit"></i> Editar
                                                 </a>
-                                                <a href="index.php?action=tipos&method=eliminar&id=<?php echo $tipo['id_tipo']; ?>" 
+                                                <a href="index.php?action=tipos&method=eliminar&id=<?php echo $tipo['id_tipo']; ?>"
                                                    class="btn btn-sm btn-danger"
                                                    onclick="return confirm('¿Estás seguro de que quieres eliminar este tipo de producto?')">
                                                     <i class="fas fa-trash"></i> Eliminar

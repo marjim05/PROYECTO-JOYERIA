@@ -26,7 +26,7 @@ include_once 'views/layout/header.php';
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="nombre_producto" class="form-label">Nombre del Producto *</label>
-                                    <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" 
+                                    <input type="text" class="form-control" id="nombre_producto" name="nombre_producto"
                                            value="<?php echo htmlspecialchars($producto['nombre_producto']); ?>" required>
                                 </div>
                             </div>
@@ -71,8 +71,8 @@ include_once 'views/layout/header.php';
                                     <label for="precio" class="form-label">Precio *</label>
                                     <div class="input-group">
                                         <span class="input-group-text">$</span>
-                                        <input type="number" class="form-control" id="precio" name="precio" 
-                                               value="<?php echo htmlspecialchars($producto['precio']); ?>" 
+                                        <input type="number" class="form-control" id="precio" name="precio"
+                                               value="<?php echo htmlspecialchars($producto['precio']); ?>"
                                                min="1" required>
                                     </div>
                                 </div>
@@ -80,8 +80,8 @@ include_once 'views/layout/header.php';
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="stock" class="form-label">Stock</label>
-                                    <input type="number" class="form-control" id="stock" name="stock" 
-                                           value="<?php echo htmlspecialchars($producto['stock']); ?>" 
+                                    <input type="number" class="form-control" id="stock" name="stock"
+                                           value="<?php echo htmlspecialchars($producto['stock']); ?>"
                                            min="0">
                                 </div>
                             </div>
