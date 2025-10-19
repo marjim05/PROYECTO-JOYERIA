@@ -1,7 +1,4 @@
 <?php
-namespace Models;
-use Exception;
-
 
 require_once __DIR__ . '/../config/database.php';
 

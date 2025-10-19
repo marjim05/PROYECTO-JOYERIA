@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'CRUD/config/auth.php';
 
 // Si ya está logueado, redirigir al dashboard
@@ -23,7 +23,7 @@ if ($_POST) {
     }
 }
 
-include_once 'layout/header.php'; 
+include_once 'layout/header.php';
 ?>
 
     <header class="bg-light text-dark text-center py-5" style="margin-bottom: 50px;">

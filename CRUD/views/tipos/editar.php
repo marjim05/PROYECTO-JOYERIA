@@ -1,4 +1,6 @@
-<?php include_once 'views/layout/header.php'; ?>
+<?php 
+use Views\Layout\Header;
+?>
 
 <div class="container-fluid">
     <div class="row">
@@ -41,4 +43,6 @@
     </div>
 </div>
 
-<?php include_once 'views/layout/footer.php'; ?>
+<?php
+use Views\Layout\Footer;
+?>

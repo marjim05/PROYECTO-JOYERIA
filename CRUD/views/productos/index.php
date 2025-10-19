@@ -1,7 +1,7 @@
-<?php 
+<?php
 require_once __DIR__ . '/../../config/auth.php';
 $usuario = obtenerUsuarioActual();
-include_once __DIR__ . '/../layout/header.php'; 
+include_once __DIR__ . '/../layout/header.php';
 ?>
 
 <div class="container-fluid">

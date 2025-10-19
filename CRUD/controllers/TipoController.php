@@ -1,6 +1,7 @@
 <?php
-use Config\Auth;
-use Models\TipoProducto;
+require_once 'config/auth.php';
+require_once 'models/TipoProducto.php';
+
 
 use Views\Tipos\EditarView;
 use Views\Tipos\CrearView;
